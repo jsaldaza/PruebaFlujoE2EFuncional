@@ -1,0 +1,788 @@
+{
+	"info": {
+		"_postman_id": "598bbd49-008e-4457-9081-f17055f1afbc",
+		"name": "ZNewPod2A",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23485208"
+	},
+	"item": [
+		{
+			"name": "RNCValidacionesCertificadoConduccionMS",
+			"item": [
+				{
+					"name": "CU7144-US84 - Validar Tramite y categoria con solicitud o certificado aptitud fisica y coordinación motriz",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/alumnos/validar-solicitud-certificado?tipoDoc=C&numDoc=99242022&codTramite=38",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"alumnos",
+								"validar-solicitud-certificado"
+							],
+							"query": [
+								{
+									"key": "tipoDoc",
+									"value": "C"
+								},
+								{
+									"key": "numDoc",
+									"value": "99242022"
+								},
+								{
+									"key": "codTramite",
+									"value": "38"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU5246-US109 - Validar categorias CEA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/vehiculos/categorias?idSolicitud=166946974",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"vehiculos",
+								"categorias"
+							],
+							"query": [
+								{
+									"key": "idSolicitud",
+									"value": "166946974"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU5312-US512 - Obtener instructores CEA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/instructores?idCea=1305290&fecha=10/10/2015",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"instructores"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305290"
+								},
+								{
+									"key": "fecha",
+									"value": "10/10/2015"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU6573-US111 - Validación de Instructores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/autos/instructor?idSolicitud=166961572&idTramite=172379967",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"autos",
+								"instructor"
+							],
+							"query": [
+								{
+									"key": "idSolicitud",
+									"value": "166961572"
+								},
+								{
+									"key": "idTramite",
+									"value": "172379967"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU6573-US464 - Obtener CEA y Categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/categoria?idSolicitud=166941478&idTramite=172377341",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"categoria"
+							],
+							"query": [
+								{
+									"key": "idSolicitud",
+									"value": "166941478"
+								},
+								{
+									"key": "idTramite",
+									"value": "172377341"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Vehiculos asociados para el grupo de categoría solicitada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/certificados-expedidos?idSolicitud=167201891&idTramite=172623203",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"certificados-expedidos"
+							],
+							"query": [
+								{
+									"key": "idSolicitud",
+									"value": "167201891"
+								},
+								{
+									"key": "idTramite",
+									"value": "172623203"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validar categoria por id CEA",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidacionesCertificadoConduccionMS}}/rnc/validaciones/cea/categoria?idSolicitud=167083101&idTramite=172510017",
+							"host": [
+								"{{env}}{{RNCValidacionesCertificadoConduccionMS}}"
+							],
+							"path": [
+								"rnc",
+								"validaciones",
+								"cea",
+								"categoria"
+							],
+							"query": [
+								{
+									"key": "idSolicitud",
+									"value": "167083101"
+								},
+								{
+									"key": "idTramite",
+									"value": "172510017"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RNCCertificadoMS",
+			"item": [
+				{
+					"name": "CUR01964-US770 - Consulta certificado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCCertificadoMS}}/certificados/aptitud-conduccion/consultar-existencia-estado?numeroCertificado=18789836",
+							"host": [
+								"{{env}}{{RNCCertificadoMS}}"
+							],
+							"path": [
+								"certificados",
+								"aptitud-conduccion",
+								"consultar-existencia-estado"
+							],
+							"query": [
+								{
+									"key": "numeroCertificado",
+									"value": "18789836"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU5312-US979 - [RegistrarHoras] Categorías habilitadas",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCCertificadoMS}}/certificados/certificado-cea/categorias/?tipoCertificado=CERTIFICADO CONDUCTOR&tipoTramite=29&idCea=18556077",
+							"host": [
+								"{{env}}{{RNCCertificadoMS}}"
+							],
+							"path": [
+								"certificados",
+								"certificado-cea",
+								"categorias",
+								""
+							],
+							"query": [
+								{
+									"key": "tipoCertificado",
+									"value": "CERTIFICADO CONDUCTOR"
+								},
+								{
+									"key": "tipoTramite",
+									"value": "29"
+								},
+								{
+									"key": "idCea",
+									"value": "18556077"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU5312-US978 - [RegistrarHoras] Tipo Tramite",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCCertificadoMS}}/certificados/certificado-cea/tramites?idCea=592703&tipoCertificado=certificado instructor",
+							"host": [
+								"{{env}}{{RNCCertificadoMS}}"
+							],
+							"path": [
+								"certificados",
+								"certificado-cea",
+								"tramites"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "592703"
+								},
+								{
+									"key": "tipoCertificado",
+									"value": "certificado instructor"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU5312-US977 - [RegistrarHoras] Tipo Certificado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCCertificadoMS}}/certificados/certificado-cea/tipos?idCea=1305004",
+							"host": [
+								"{{env}}{{RNCCertificadoMS}}"
+							],
+							"path": [
+								"certificados",
+								"certificado-cea",
+								"tipos"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305004"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RNCAlumnoMS",
+			"item": [
+				{
+					"name": "CU5312-US974 - [RegistrarHoras] Listado de alumnos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCAlumnoMS}}/alumnos/?tipoCertificado=CERTIFICADO CONDUCTOR&tipoTramite=29&idCategoria=A2",
+							"host": [
+								"{{env}}{{RNCAlumnoMS}}"
+							],
+							"path": [
+								"alumnos",
+								""
+							],
+							"query": [
+								{
+									"key": "tipoCertificado",
+									"value": "CERTIFICADO CONDUCTOR"
+								},
+								{
+									"key": "tipoTramite",
+									"value": "29"
+								},
+								{
+									"key": "idCategoria",
+									"value": "A2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "CU6586-US334 - Buscar y generar lista de alumnos inscritos en categoria seleccionada",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCAlumnoMS}}/alumnos/inscritos?idCea=1305276&idCategoria=B1",
+							"host": [
+								"{{env}}{{RNCAlumnoMS}}"
+							],
+							"path": [
+								"alumnos",
+								"inscritos"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305276"
+								},
+								{
+									"key": "idCategoria",
+									"value": "B1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RNCValidadorSolicitudMS",
+			"item": [
+				{
+					"name": "CU7340-US85 -Validar que no haya sanciones/cancelaciones en Estado ACTIVOO",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCValidadorSolicitudMS}}/rnc/escuelas/alumnos/validar-existencia-sanciones-activas?numSolicitud=52387298",
+							"host": [
+								"{{env}}{{RNCValidadorSolicitudMS}}"
+							],
+							"path": [
+								"rnc",
+								"escuelas",
+								"alumnos",
+								"validar-existencia-sanciones-activas"
+							],
+							"query": [
+								{
+									"key": "numSolicitud",
+									"value": "52387298"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RNCReporteMS",
+			"item": [
+				{
+					"name": "US332 - Generar información CEA y lista categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCReporteMS}}/reportes/cea/busqueda/identificacion?idCea=1305279",
+							"host": [
+								"{{env}}{{RNCReporteMS}}"
+							],
+							"path": [
+								"reportes",
+								"cea",
+								"busqueda",
+								"identificacion"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305279"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "US332 - Generar información CEA y lista categorias",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCReporteMS}}/reportes/cea/busqueda/identificacion?idCea=1305290",
+							"host": [
+								"{{env}}{{RNCReporteMS}}"
+							],
+							"path": [
+								"reportes",
+								"cea",
+								"busqueda",
+								"identificacion"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305290"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "validación instructores",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{env}}{{RNCReporteMS}}/reportes/cea/detalle-ceas/instructores?idCea=1305243&size=100",
+							"host": [
+								"{{env}}{{RNCReporteMS}}"
+							],
+							"path": [
+								"reportes",
+								"cea",
+								"detalle-ceas",
+								"instructores"
+							],
+							"query": [
+								{
+									"key": "idCea",
+									"value": "1305243"
+								},
+								{
+									"key": "size",
+									"value": "100"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RNCCeaMS",
+			"item": [
+				{
+					"name": "Lista Tipo Hora",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8084/RNCCeaMS/rnc/cea/tipo-prueba",
+							"host": [
+								"localhost"
+							],
+							"port": "8084",
+							"path": [
+								"RNCCeaMS",
+								"rnc",
+								"cea",
+								"tipo-prueba"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
