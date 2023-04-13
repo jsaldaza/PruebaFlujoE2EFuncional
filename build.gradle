@@ -1,0 +1,70 @@
+defaultTasks 'clean', 'test', 'aggregate'
+
+repositories {
+    mavenLocal()
+    mavenCentral()
+}
+
+group 'co.com.demoblaze'
+version '1.0-SNAPSHOT'
+
+
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            url "https://plugins.gradle.org/m2/"
+        }
+        google()
+    }
+    dependencies {
+        classpath "net.serenity-bdd:serenity-gradle-plugin:3.3.0"
+        classpath('net.serenity-bdd:serenity-single-page-report:2.3.11')
+        classpath('gradle.plugin.com.github.sherter.google-java-format:google-java-format-gradle-plugin:0.9')
+    }
+}
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin: 'idea'
+apply plugin: "net.serenity-bdd.serenity-gradle-plugin"
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+ext {
+    serenityVersion = '3.6.22'
+    slf4jVersion = '2.0.7'
+    serenityCoreVersion = '3.6.22'
+    serenityCucumberVersion = '3.6.22'
+    junitVersion = '4.13.2'
+    assertJVersion = '3.24.2'
+    logbackVersion = '1.4.6'
+}
+
+
+
+dependencies {
+    implementation "net.serenity-bdd:serenity-core:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-junit:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-screenplay:$rootProject.ext.serenityVersion"
+    implementation "net.serenity-bdd:serenity-cucumber:$rootProject.ext.serenityCucumberVersion"
+    implementation "net.serenity-bdd:serenity-ensure:$rootProject.ext.serenityVersion"
+    implementation "ch.qos.logback:logback-classic:${logbackVersion}"
+
+}
+serenity {
+    reports = ["single-page-html"]
+}
+
+
+gradle.startParameter.continueOnFailure = true
+
+test {
+    systemProperties System.getProperties()
+    maxParallelForks = Runtime.runtime.availableProcessors()
+}
