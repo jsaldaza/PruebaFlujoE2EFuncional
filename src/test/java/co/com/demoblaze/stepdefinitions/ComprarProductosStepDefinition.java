@@ -1,6 +1,5 @@
 package co.com.demoblaze.stepdefinitions;
 
-
 import co.com.demoblaze.tests.interactions.AbrirAplicacion;
 import co.com.demoblaze.tests.questions.ComprarProductosQuestion;
 import co.com.demoblaze.tests.tasks.ComprarProductosTasks;
@@ -20,10 +19,9 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isPres
 
 public class ComprarProductosStepDefinition {
 
-
     @Dado("que {string} se encuentra en la aplicacion")
     public void queSeEncuentraEnLaAplicacion(String actor) {
-        theActorCalled(actor).attemptsTo(AbrirAplicacion.dedemoblaze());
+        theActorCalled(actor).attemptsTo(AbrirAplicacion.dedemoblazePage());
     }
 
     @Cuando("agrega productos al carro de compras y llena cada uno de los campos de la orden de compra")
@@ -38,12 +36,10 @@ public class ComprarProductosStepDefinition {
                         .withyear(data.get(0).get("Year")))
         );
     }
+
     @Entonces("podra completar de manera exitosa la compra de sus productos")
     public void podraCompletarDeManeraExitosaLaCompraDeSusProductos() {
         System.out.println(ComprarProductosQuestion.value().answeredBy(theActorInTheSpotlight()));
         WaitUntil.the(COMPRA_EXITOSA, isPresent());
     }
-
-
-
 }

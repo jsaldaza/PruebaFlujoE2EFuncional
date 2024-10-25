@@ -1,5 +1,6 @@
 package co.com.demoblaze.runners;
 
+
 import io.cucumber.junit.CucumberOptions;
 import io.cucumber.junit.CucumberSerenityRunner;
 import org.junit.runner.RunWith;
@@ -10,5 +11,7 @@ import org.junit.runner.RunWith;
         glue = "co.com.demoblaze.stepdefinitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
-public class ComprarProductosRunner {
+public class ComprarProductossRunner {
 }
+
+

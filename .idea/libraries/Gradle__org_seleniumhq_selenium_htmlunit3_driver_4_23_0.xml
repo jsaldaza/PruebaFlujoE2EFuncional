@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.seleniumhq.selenium:htmlunit3-driver:4.23.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.seleniumhq.selenium" artifactId="htmlunit3-driver" version="4.23.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.seleniumhq.selenium/htmlunit3-driver/4.23.0/b99866479e11d228fe2f4a10e916c2d01518bafe/htmlunit3-driver-4.23.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

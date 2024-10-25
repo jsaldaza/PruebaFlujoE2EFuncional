@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: com.sun.xml.bind:jaxb-core:4.0.3" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="com.sun.xml.bind" artifactId="jaxb-core" version="4.0.3" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.sun.xml.bind/jaxb-core/4.0.3/f1d7c66067b3d85fa17fd40a9aaae829250f3344/jaxb-core-4.0.3.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

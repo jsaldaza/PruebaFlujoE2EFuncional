@@ -15,7 +15,7 @@ public class ComprarProductosUInterface {
     public static final Target BTN_PURCHASE = Target.the("clic en boton purchase").locatedBy("(//*[@class= 'btn btn-primary'])[3]");
 
     public static final Target BTN_ADD_CAR = Target.the("clic en boton agregar al carro").locatedBy("//*[@class= 'btn btn-success btn-lg']");
-    public static final Target BTN_HOME = Target.the("clic en boton home").locatedBy("(//*[@class= 'nav-link'])[1]");
+    public static final Target BTN_HOME = Target.the("clic en boton home").locatedBy("//a[@class='nav-link'][contains(.,'Home (current)')]");
 
 
     public static final Target TXT_NAME = Target.the("ingresar nombre").locatedBy("(//*[@class= 'form-control'])[6]");

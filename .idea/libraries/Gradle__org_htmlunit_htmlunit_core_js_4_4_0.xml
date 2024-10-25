@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: org.htmlunit:htmlunit-core-js:4.4.0" type="java-imported" external-system-id="GRADLE">
+    <properties groupId="org.htmlunit" artifactId="htmlunit-core-js" version="4.4.0" />
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.htmlunit/htmlunit-core-js/4.4.0/b1c43ba55e789b1e6494a9f0d2df24e5e9cc2996/htmlunit-core-js-4.4.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

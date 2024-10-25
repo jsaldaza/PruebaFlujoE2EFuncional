@@ -13,5 +13,5 @@ public class AbrirAplicacion implements Interaction {
 
 
     }
-    public static Performable dedemoblaze(){return instrumented(AbrirAplicacion.class);}
+    public static Performable dedemoblazePage(){return instrumented(AbrirAplicacion.class);}
 }
